@@ -150,7 +150,7 @@ task_registry.register("cassie", Cassie, CassieRoughCfg(), CassieRoughCfgPPO())
 task_registry.register("cassie_traj_grad_sampling", CassieTrajGradSampling,
                        CassieTrajGradSamplingCfg(), CassieTrajGradSamplingCfgPPO())
 
-
+# 六足机器人
 task_registry.register("elspider_air_rough", ElSpider, ElSpiderAirRoughTrainCfg(), ElSpiderAirRoughTrainCfgPPO())
 task_registry.register("elspider_air_rough_raycast", ElSpiderRayCast,
                        ElSpiderAirRoughRaycastCfg(), ElSpiderAirRoughRaycastCfgPPO())

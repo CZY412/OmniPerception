@@ -289,7 +289,7 @@ def get_args():
     # parse arguments
     args = gymutil.parse_arguments(
         description="RL Policy",
-        custom_parameters=custom_parameters)
+        custom_parameters=custom_parameters) # 原型:def parse_arguments(description="Isaac Gym Example", headless=False, no_graphics=False, custom_parameters=[])
 
     # name allignment
     args.sim_device_id = args.compute_device_id

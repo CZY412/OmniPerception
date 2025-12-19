@@ -89,12 +89,12 @@ class TaskRegistry():
             # load config files
             env_cfg, _ = self.get_cfgs(name)
         # override cfg from args (if specified)
-        env_cfg, _ = update_cfg_from_args(env_cfg, None, args)
+        env_cfg, _ = update_cfg_from_args(env_cfg, None, args) # 覆盖默认的环境配置和训练配置
         set_seed(env_cfg.seed)
         # parse sim params (convert to dict first)
         sim_params = {"sim": class_to_dict(env_cfg.sim)}
         sim_params = parse_sim_params(args, sim_params)
-        env = task_class(   cfg=env_cfg,  # 标记第二处
+        env = task_class(   cfg=env_cfg, 
                             sim_params=sim_params,
                             physics_engine=args.physics_engine,
                             sim_device=args.sim_device,
